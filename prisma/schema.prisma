@@ -4,6 +4,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model UnidadeHospitalar {
@@ -46,6 +47,8 @@ model Medico {
   consultas Consulta[]
 }
 
+
+//Criar Consulta (depende de Paciente e Medico)
 model Consulta {
   id_consulta Int      @id @default(autoincrement())
   id_paciente Int
@@ -63,6 +66,8 @@ model Consulta {
   prontuario Prontuario?
 }
 
+
+//Criar Prontuario (depende de Consulta)
 model Prontuario {
   id_prontuario Int      @id @default(autoincrement())
   id_consulta   Int @unique
