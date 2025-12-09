@@ -12,19 +12,31 @@ Zod
 MySQL
 
 Como rodar:
+
 npm install
+
 npx prisma migrate dev
+
 npm run dev
 
 
+
 Configuração do .env
+
 DATABASE_URL="mysql://usuario:senha@localhost:3306/vidaplus"
 
 Endpoints principais:
+
 POST /user
+
 POST /unit
+
 POST /doctor
+
 POST /consultation
+
 POST /medicalRecord
+
 GET /users
+
 DELETE /consultations/:id
